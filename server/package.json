@@ -6,7 +6,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "set DEBUG=express:* && nodemon app.js",
-    "build": "react-scripts build --mode production"
   },
   "author": "",
   "license": "ISC",
