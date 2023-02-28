@@ -1,0 +1,781 @@
+/* General */
+/* ------------------------- */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', Times, serif;
+}
+
+
+button {
+
+    border: none;
+    border-radius: 5px;
+
+}
+
+button:hover {
+    cursor: pointer !important;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navbar section */
+/* ----------------------------------- */
+
+.navbar-wrapper {
+    background-color: rgb(36, 37, 38);
+    color: rgb(255, 255, 255);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+    z-index: 1000;
+    align-items: center;
+
+}
+
+.navbar {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+
+
+.navbar-wrapper .logout-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 1.1em;
+    background-color: #d9534f;
+    color: hsla(0, 0%, 98%, .9);
+}
+
+.navbar-wrapper .profile-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-right: 20px;
+}
+
+.page-wrapper {
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(28, 30, 33);
+
+}
+
+.App {
+    width: 40%;
+    margin: 0 auto;
+    padding-top: 150px;
+    padding-bottom: 1px;
+
+}
+
+
+
+/* --------------------------------------- */
+
+/* Dashboard */
+/* -------------------------------------- */
+
+
+/* Friends Panel */
+.friends-panel {
+    color: white;
+    position: fixed;
+    right: 0;
+    top: 88px;
+    height: calc(100% - 88px);
+    width: 400px;
+    padding-left: 10px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding: 20px 10px;
+}
+
+.hamburger-nav-items.show .friends-panel {
+    width: 0;
+}
+
+.hamburger-nav-items .friends-panel {
+    width: 0;
+}
+
+section .not-friend {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+.friends-panel ul li {
+    padding: 10px 0px;
+    padding-right: 20px;
+    padding-left: 10px;
+    border-radius: 5px;
+    font-size: larger;
+
+}
+
+
+.friends-panel ul li:hover {
+    background-color: rgb(56, 60, 65);
+}
+
+.request-btn,
+.addFriend-btn {
+    color: white;
+    padding: 0 10px;
+}
+
+.addFriend-btn {
+    background-color: #20c997;
+}
+
+.request-btn.pending {
+    background-color: #343a40;
+}
+
+.request-btn.send {
+    background-color: #0275d8;
+}
+
+/* --------------------------------- */
+/* Main dashboard */
+
+.flex-dashboard--main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: hsla(0, 0%, 98%, .9)
+}
+
+div.create-post textarea {
+    display: block;
+    width: 40vw;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    background-color: rgb(38, 46, 54) !important;
+    border: none;
+    color: hsla(0, 0%, 98%, .9);
+    font-size: 1.2em;
+    transition: box-shadow 0.2s ease 0s;
+    resize: vertical;
+}
+
+div.create-post button {
+    padding: 10px 45px;
+    color: white;
+    background-color: #20c997;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.2em;
+    transition: all 0.1s ease-in-out 0s;
+    display: block;
+    margin-left: auto;
+    margin-bottom: 20px;
+}
+
+div.create-post button:hover {
+    cursor: pointer;
+    background-color: #1ca97f;
+
+}
+
+div.create-post textarea:focus {
+    box-shadow: 0 0 10px steelblue;
+}
+
+.flex-post--top {
+    display: flex;
+    gap: 10px;
+}
+
+.flex-post--top img {
+    width: 50px;
+    border-radius: 50%;
+}
+
+.post {
+    margin-bottom: 20px;
+    background-color: rgb(20, 21, 21);
+    padding: 20px 10px;
+    border-radius: 15px;
+    width: 37vw;
+    padding-bottom: 0px;
+    position: relative;
+}
+
+.post-text {
+    text-transform: capitalize;
+    margin: 10px 0px;
+}
+
+.post-created-time {
+    font-style: italic;
+    color: hsla(0, 0%, 98%, .6);
+    transform: translateY(-5px);
+}
+
+.delete-post {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 1.2em;
+}
+
+.delete-post svg {
+    color: #d9534f;
+}
+
+.delete-post:hover {
+    cursor: pointer;
+}
+
+.delete-post:hover .delete-p {
+    display: block;
+    color: #d9534f;
+}
+
+.delete-p {
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: -20px;
+}
+
+
+.comment-btns-div {
+    display: flex;
+    gap: 10px;
+
+}
+
+
+
+.comment-btns-div .post-btn {
+    padding: 10px 45px;
+    color: white;
+    background-color: #343a40;
+    border: none;
+    font-size: 1.2em;
+    transition: all 0.1s ease-in-out 0s;
+}
+
+.comment-btns-div .post-btn:hover {
+    cursor: pointer;
+    background-color: #474f57;
+}
+
+.like-btn {
+    flex: 1;
+
+}
+
+.comment-btn {
+    flex: 1;
+
+}
+
+.likes-comments-count--flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+div.comments.hidden {
+    height: 0px;
+    overflow: hidden;
+}
+
+
+.comments {
+    margin: 15px 0px;
+    transition: all 1s ease 0.2s;
+}
+
+.comment-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.comment-heading img {
+    width: 30px;
+    border-radius: 50%;
+}
+
+.comment-heading--flex {
+    display: flex;
+    gap: 10px;
+}
+
+.comment-text {
+    padding-top: 8px;
+}
+
+
+.comment {
+    margin: 15px 0px;
+    padding: 10px 10px;
+    border-radius: 10px;
+    background-color: rgb(28, 30, 33);
+}
+
+.comment-input {
+    width: 100%;
+    margin: 0;
+    border-radius: 5px;
+    background-color: rgb(35, 42, 49) !important;
+    border: none;
+    color: hsla(0, 0%, 98%, .9);
+    font-size: 1.2em;
+    transition: box-shadow 0.2s ease 0s;
+    resize: vertical;
+    padding: 5px;
+}
+
+.comment-submit {
+    padding: 10px 25px;
+    color: white;
+    background-color: #20c997;
+    border: none;
+    border-radius: 35px;
+    font-size: 1.0em;
+    transition: all 0.1s ease-in-out 0s;
+    margin-top: 10px;
+}
+
+.comment-form {
+    margin-top: 15px;
+    border-top: 1px solid white;
+    padding-top: 15px;
+}
+
+
+/* Login page design */
+
+.login-register--flex {
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    position: relative;
+}
+
+.login-register--flex input {
+    display: block;
+    background-color: hsla(0, 0%, 98%, .9);
+    width: 100%;
+    margin: 0;
+    border-radius: 5px;
+    background-color: rgb(57, 69, 80) !important;
+    border: none;
+    color: hsla(0, 0%, 98%, .9);
+    font-size: 1.2em;
+    transition: box-shadow 0.2s ease 0s;
+    resize: vertical;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.login-register--flex label {
+    color: hsla(0, 0%, 98%, .9)
+}
+
+.login-register--flex {
+    color: hsla(0, 0%, 98%, .9)
+}
+
+.login-register--flex h2 {
+    margin-bottom: 10px;
+}
+
+.line {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.line.separator {
+    height: 100%;
+    background-color: white;
+    width: 1px;
+    z-index: 1;
+}
+
+.line.middle-paragraph {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    width: 60px;
+    height: 60px;
+    background-color: rgb(28, 30, 33);
+    border-radius: 50%;
+    border: 2px solid white;
+    font-size: 1.5em;
+}
+
+.login-page-btns {
+    padding: 10px 45px;
+    color: white;
+    background-color: #20c997;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.2em;
+    transition: all 0.1s ease-in-out 0s;
+    display: block;
+    margin-top: 20px;
+}
+
+.login-page-btns:hover {
+    cursor: pointer;
+    background-color: #1ca97f;
+}
+
+.facebook--btn,
+.test-user--btn {
+    padding: 10px 45px;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.2em;
+    transition: all 0.1s ease-in-out 0s;
+    display: block;
+    margin-top: 20px;
+}
+
+.facebook--btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    background-color: #4267B2;
+    width: 260px;
+}
+
+.facebook--btn svg {
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+}
+
+.test-user--btn {
+    margin-top: 20px;
+    background-color: #FFBF00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 260px;
+}
+
+.test-user--btn:hover {
+    background-color: #ffbf00c3;
+}
+
+.facebook--btn:hover {
+    background-color: #334f88;
+}
+
+.test-user--btn svg {
+    margin-right: 10px;
+    width: 25px;
+    height: 25px;
+}
+
+/* Profile page */
+
+.profile-info-flex {
+    width: 100%;
+    background-color: rgb(20, 21, 21);
+    color: hsla(0, 0%, 98%, .9);
+    display: flex;
+    align-items: center;
+    margin-top: -61px;
+    margin-bottom: 50px;
+    padding: 10px 20px;
+    justify-content: space-between;
+
+}
+
+.profile-info-flex .profile-photo {
+    width: 50px;
+    border-radius: 50%;
+}
+
+.profile-info-flex--left {
+    display: flex;
+    gap: 15px;
+}
+
+
+
+.profile-info-flex .friends-status {
+    display: flex;
+    align-items: baseline;
+    gap: 20px;
+    font-size: 2em;
+}
+
+.user-status {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.2em;
+}
+
+
+.profile-photo-form {
+    padding: 20px;
+    background-color: rgb(20, 21, 21);
+    border: 1px solid hsla(0, 0%, 98%, .4);
+    border-radius: 10px;
+}
+
+.profile-photo-form input {
+    margin-right: 10px;
+    background-color: hsla(0, 0%, 98%, .9);
+    border-radius: 5px;
+    background-color: rgb(57, 69, 80) !important;
+    border: none;
+    color: hsla(0, 0%, 98%, .9);
+    font-size: 1.2em;
+    transition: box-shadow 0.2s ease 0s;
+    resize: vertical;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.profile-photo-form button {
+    padding: 10px 45px;
+    color: white;
+    background-color: #20c997;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.2em;
+    transition: all 0.1s ease-in-out 0s;
+    margin-left: auto;
+}
+
+.change-photo-btn {
+    background-color: #FFBF00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    color: white;
+    font-weight: bold;
+    border-radius: 25px;
+}
+
+/* Hamburger Menu Design */
+
+.menu-btn {
+    display: none;
+    position: fixed;
+    right: 30px;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+    padding-top: 5px;
+    background-color: none;
+    top: 30px;
+    z-index: 1234;
+}
+
+.hamburger-close-btn {
+    position: absolute;
+    right: 15px;
+    background-color: #d9534f;
+    width: 25px;
+    height: 25px;
+    top: 15px;
+}
+
+.hamburger-close-btn:hover {
+    cursor: pointer;
+}
+
+
+.menu-btn .btn-line {
+    width: 28px;
+    height: 3px;
+    margin: 0 0 5px 0;
+    background: black;
+    transition: all 0.5s ease-out;
+    background-color: hsla(0, 0%, 98%, .9)
+}
+
+.friends-wrapper .friends-panel {
+    display: none;
+}
+
+
+/* -------------------------------- */
+
+@media screen and (max-width: 1550px) {
+    .menu-btn {
+        display: block;
+    }
+
+    .user-status {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* Login screen */
+    .line,
+    .middle-paragraph {
+        display: none !important;
+    }
+
+    .popup-content {
+        left: 0 !important;
+        right: 0 !important;
+        margin: 0 auto !important;
+        width: 80%;
+        max-width: 800px;
+    }
+
+    .popup-content input {
+        width: 100%;
+    }
+
+    .popup-content svg {
+        display: none;
+    }
+
+    .login-register--flex {
+        display: block;
+    }
+
+    .App {
+        width: 100%;
+    }
+
+    .login-form {
+        width: 30%;
+        min-width: 260px;
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+
+    .register-form {
+        width: 30%;
+        min-width: 260px;
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+
+    .profile-logout-btns-wrapper {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+    }
+
+    /* ----------------- */
+
+    /* Dashboard */
+
+    .post {
+        width: 60vw;
+    }
+
+    div.create-post textarea {
+        width: 70vw;
+    }
+
+    .change-photo-btn {
+        position: absolute;
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    /* ------------------ */
+
+    .friends-panel {
+        display: none;
+    }
+
+    .friends-wrapper .friends-panel {
+        display: block;
+        right: -40px;
+        border-left: 1px solid hsla(0, 0%, 98%, .4);
+        z-index: 4;
+        background-color: rgb(20, 21, 21);
+        transition: 0.5s;
+    }
+
+    .friends-wrapper .friends-panel section {
+        width: 320px;
+
+    }
+
+    .hamburger-nav-items.show .friends-wrapper .friends-panel {
+        width: 350px;
+        right: 0px;
+    }
+
+
+
+}
+
+
+@media screen and (max-width: 800px) {
+    /* Dashboard */
+
+    .post {
+        width: 90vw;
+    }
+
+    .friends-panel {
+        display: none;
+    }
+
+    div.create-post textarea {
+        width: 90vw;
+    }
+
+    .profile-photo-form button {
+        padding: 5px 25px;
+    }
+
+    .change-photo-btn {
+        position: absolute;
+        right: 120px;
+        font-size: 0.7em
+    }
+
+    .user-status {
+        position: absolute;
+        left: unset;
+        transform: unset;
+        right: 100px;
+    }
+
+    .profile-logout-btns-wrapper button {
+        padding: 5px 10px !important;
+    }
+
+    /* ------------------ */
+
+}
