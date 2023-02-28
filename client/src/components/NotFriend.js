@@ -6,7 +6,7 @@ const NotFriend = ({ setError, notFriends, sentFriendRequests, setSentFriendRequ
 
     const sendRequest = async (id) => {
 
-        const response = await fetch("http://localhost:5000/api/send-request", {
+        const response = await fetch("https://odin-book.site/api/send-request", {
             headers: {
                 'Authorization': 'Bearer ' + user.token,
                 'Content-Type': 'application/json'

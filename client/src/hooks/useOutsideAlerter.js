@@ -8,7 +8,6 @@ function useOutsideAlerter(ref, isOpen, setIsOpen) {
         function handleClickOutside(event) {
             if (ref.current && !ref.current.contains(event.target)) {
                 if (isOpen) {
-                    console.log(isOpen)
                     const openedDiv = document.querySelector(".hamburger-nav-items")
                     openedDiv.classList.remove("show")
                     setIsOpen((prev) => !prev)

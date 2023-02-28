@@ -10,7 +10,7 @@ const Profile = () => {
   return (
     <div className="flex-dashboard--main">
       <ProfileInfo />
-      <Post posts={posts} setPosts={setPosts} query={`http://localhost:5000/api${location.pathname}`} />
+      <Post posts={posts} setPosts={setPosts} query={`https://odin-book.site/api${location.pathname}`} />
     </div>
   )
 }

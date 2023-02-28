@@ -16,7 +16,7 @@ const Friends = ({ inHamburger, setIsOpen }) => {
   useEffect(() => {
     if (user) {
       const fetchData = async () => {
-        const response = await fetch("http://localhost:5000/api/friendslist", {
+        const response = await fetch("https://odin-book.site/api/friendslist", {
           headers: {
             'Authorization': 'Bearer ' + user.token
           }

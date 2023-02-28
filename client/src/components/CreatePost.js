@@ -8,7 +8,7 @@ const CreatePost = ({ posts, setPosts }) => {
 
   const handleForm = async (e) => {
     e.preventDefault()
-    const response = await fetch("http://localhost:5000/api/create-post", {
+    const response = await fetch("https://odin-book.site/api/create-post", {
       headers: {
         'Authorization': 'Bearer ' + user.token,
         'Content-Type': 'application/json'

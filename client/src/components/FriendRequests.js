@@ -10,7 +10,7 @@ const FriendRequests = ({ setFriends, friends }) => {
 
 
   const addFriend = async (id) => {
-    const response = await fetch("http://localhost:5000/api/add-friend", {
+    const response = await fetch("https://odin-book.site/api/add-friend", {
       headers: {
         'Authorization': 'Bearer ' + user.token,
         'Content-Type': 'application/json'
@@ -33,7 +33,7 @@ const FriendRequests = ({ setFriends, friends }) => {
   useEffect(() => {
     if (user) {
       const fetchRequests = async () => {
-        const response = await fetch("http://localhost:5000/api/friend-requests", {
+        const response = await fetch("https://odin-book.site/api/friend-requests", {
           headers: {
             'Authorization': 'Bearer ' + user.token
           }
@@ -42,7 +42,6 @@ const FriendRequests = ({ setFriends, friends }) => {
         const json = await response.json()
 
         if (response.ok) {
-          console.log(json)
           return setFriendRequests(json)
         }
       }

@@ -36,7 +36,7 @@ const Post = ({ posts, setPosts, query, owner }) => {
     }, [user, query])
 
     const likePost = async (id) => {
-        const response = await fetch("http://localhost:5000/api/like-post", {
+        const response = await fetch("https://odin-book.site/api/like-post", {
             headers: {
                 'Authorization': 'Bearer ' + user.token,
                 'Content-Type': 'application/json'
@@ -62,7 +62,7 @@ const Post = ({ posts, setPosts, query, owner }) => {
     }
 
     const unLikePost = async (id) => {
-        const response = await fetch("http://localhost:5000/api/unlike-post", {
+        const response = await fetch("https://odin-book.site/api/unlike-post", {
             headers: {
                 'Authorization': 'Bearer ' + user.token,
                 'Content-Type': 'application/json'
@@ -103,7 +103,7 @@ const Post = ({ posts, setPosts, query, owner }) => {
         e.preventDefault()
         const { text } = comments.find(comment => comment.id === id)
 
-        const response = await fetch("http://localhost:5000/api/comment-post", {
+        const response = await fetch("https://odin-book.site/api/comment-post", {
             headers: {
                 'Authorization': 'Bearer ' + user.token,
                 'Content-Type': 'application/json'
@@ -170,7 +170,7 @@ const Post = ({ posts, setPosts, query, owner }) => {
     }
 
     const deletePost = async (id) => {
-        const response = await fetch("http://localhost:5000/api/delete-post", {
+        const response = await fetch("https://odin-book.site/api/delete-post", {
             headers: {
                 'Authorization': 'Bearer ' + user.token,
                 'Content-Type': 'application/json'

@@ -13,7 +13,7 @@ const Posts = () => {
         <>
 
             <CreatePost setPosts={setPosts} posts={posts} />
-            <Post posts={posts} setPosts={setPosts} query={"http://localhost:5000/api/dashboard"} />
+            <Post posts={posts} setPosts={setPosts} query={"https://odin-book.site/api/dashboard"} />
 
         </>
     )

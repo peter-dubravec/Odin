@@ -16,7 +16,7 @@ const LoginForm = ({ isLoading, setIsLoading, loginError, setLoginError, registe
         setRegisterError("")
         e.preventDefault();
 
-        const response = await fetch("http://localhost:5000/api/login", {
+        const response = await fetch("https://odin-book.site/api/login", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
@@ -37,12 +37,12 @@ const LoginForm = ({ isLoading, setIsLoading, loginError, setLoginError, registe
 
     const facebook = () => {
         setIsLoading(true)
-        return window.open("http://localhost:5000/api/auth/facebook", "_self")
+        return window.open("https://odin-book.site/api/auth/facebook", "_self")
     }
 
     const testUser = async () => {
         setIsLoading(true)
-        const response = await fetch("http://localhost:5000/api/testuser")
+        const response = await fetch("https://odin-book.site/api/testuser")
         const json = await response.json()
         if (response.ok) {
             localStorage.setItem('user', JSON.stringify(json))

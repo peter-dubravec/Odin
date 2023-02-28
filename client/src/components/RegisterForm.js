@@ -12,7 +12,7 @@ const RegisterForm = ({ isLoading, setIsLoading, loginError, setLoginError, regi
         setRegisterError("")
         e.preventDefault();
 
-        const response = await fetch("http://localhost:5000/api/register", {
+        const response = await fetch("https://odin-book.site/api/register", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'

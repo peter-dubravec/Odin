@@ -11,7 +11,7 @@ const ProfileInfo = ({ owner }) => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const response = await fetch(`http://localhost:5000/api/profile${location.pathname}`, {
+            const response = await fetch(`https://odin-book.site/api/profile${location.pathname}`, {
                 headers: {
                     'Authorization': 'Bearer ' + user.token,
                 }

@@ -11,7 +11,7 @@ const MyProfileInfo = ({ posts, setPosts }) => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const response = await fetch(`http://localhost:5000/api/myprofile`, {
+            const response = await fetch(`https://odin-book.site/api/myprofile`, {
                 headers: {
                     'Authorization': 'Bearer ' + user.token,
                 }
@@ -28,7 +28,7 @@ const MyProfileInfo = ({ posts, setPosts }) => {
 
     const handlePhotoChange = async (e) => {
         e.preventDefault()
-        const response = await fetch("http://localhost:5000/api/change-photo", {
+        const response = await fetch("https://odin-book.site/api/change-photo", {
             headers: {
                 'Authorization': 'Bearer ' + user.token,
                 'Content-Type': 'application/json'

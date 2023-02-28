@@ -65,7 +65,7 @@ const login_post = [
 const login_from_fb = (req, res) => {
     const token = createToken(req.user);
     res.cookie('login_token', token, { maxAge: 9000000000, secure: false });
-    res.redirect("http://localhost:3000/")
+    res.redirect("https://odin-book.site/")
 }
 
 
