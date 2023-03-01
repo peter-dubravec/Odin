@@ -628,6 +628,24 @@ div.comments.hidden {
 }
 
 
+.friends-panel ul li {
+    padding-left: 0;
+    border-bottom: 1px solid hsla(0, 0%, 98%, .2);
+    border-top: 1px solid hsla(0, 0%, 98%, .2);
+}
+
+.change-photo-btn {
+    right: 70px
+}
+
+.friends-panel ul li:first-child {
+    border-top: none !important;
+}
+
+.friends-panel ul li:last-child {
+    margin-bottom: 20px;
+}
+
 /* -------------------------------- */
 
 @media screen and (max-width: 1550px) {
@@ -736,7 +754,6 @@ div.comments.hidden {
     }
 
 
-
 }
 
 
@@ -777,5 +794,29 @@ div.comments.hidden {
     }
 
     /* ------------------ */
+
+
+}
+
+@media (max-width:400px) {
+    .profile-logout-btns-wrapper {
+        margin-left: 20px;
+    }
+
+    .user-status {
+        right: 20px;
+    }
+
+    .comment-btns-div .post-btn {
+        padding: 10px 20px;
+    }
+
+    .hamburger-nav-items.show .friends-wrapper .friends-panel {
+        width: 250px;
+    }
+
+    .friends-wrapper .friends-panel section {
+        width: 230px;
+    }
 
 }
